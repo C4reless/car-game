@@ -10,3 +10,24 @@
 shape = SubResource( 1 )
 
 [node name="Spieler bild" type="Sprite" parent="Spieler 1"]
+
+[node name="Spieler 2" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spieler 2"]
+shape = SubResource( 1 )
+
+[node name="Spieler bild" type="Sprite" parent="Spieler 2"]
+
+[node name="Spieler 3" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spieler 3"]
+shape = SubResource( 1 )
+
+[node name="Spieler bild" type="Sprite" parent="Spieler 3"]
+
+[node name="Spieler 4" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spieler 4"]
+shape = SubResource( 1 )
+
+[node name="Spieler bild" type="Sprite" parent="Spieler 4"]
