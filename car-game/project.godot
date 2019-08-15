@@ -19,6 +19,13 @@ config/name="car-game"
 run/main_scene="res://Spieler.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1360
+window/size/height=768
+window/size/test_width=1024
+window/size/test_height=600
+
 [input]
 
 ui_up={

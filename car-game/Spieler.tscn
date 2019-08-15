@@ -5,16 +5,16 @@
 [node name="Spieler" type="Node2D"]
 
 [node name="Spieler 4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 140.79, 69.4925 )
+position = Vector2( 31.7009, 32.4801 )
 
 [node name="Spieler 3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 921.823, 478.695 )
+position = Vector2( 1328.68, 726.783 )
 Spieler = 2
 
 [node name="Spieler 2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 894.378, 64.0775 )
+position = Vector2( 1350.36, 16.9312 )
 Spieler = 1
 
 [node name="Spieler 1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 149.815, 446.737 )
+position = Vector2( 24.8464, 734.552 )
 Spieler = 0
