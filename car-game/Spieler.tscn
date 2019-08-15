@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Spieler" type="Node2D"]
+
+[node name="Spieler 1" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spieler 1"]
+shape = SubResource( 1 )
+
+[node name="Spieler bild" type="Sprite" parent="Spieler 1"]
