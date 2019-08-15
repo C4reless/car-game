@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ZurückLA.gd" type="Script" id=1]
+
+[node name="Levelauswahl" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 145.263
+margin_top = 196.842
+margin_right = 157.263
+margin_bottom = 216.842
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 332.632
+margin_top = 184.211
+margin_right = 344.632
+margin_bottom = 204.211
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 624.211
+margin_top = 185.263
+margin_right = 636.211
+margin_bottom = 205.263
+
+[node name="ZurückLA" type="Button" parent="."]
+margin_left = 447.0
+margin_top = 442.0
+margin_right = 511.0
+margin_bottom = 462.0
+text = "Back"
+script = ExtResource( 1 )
+[connection signal="pressed" from="ZurückLA" to="ZurückLA" method="_on_ZurckLA_pressed"]

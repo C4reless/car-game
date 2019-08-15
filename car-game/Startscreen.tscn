@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://StartKnopf.gd" type="Script" id=2]
+[ext_resource path="res://StartKnopf.gd" type="Script" id=1]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -9,10 +8,10 @@
 
 [node name="StartKnopf" type="Button" parent="."]
 material = SubResource( 1 )
-margin_left = 397.693
-margin_top = 178.275
-margin_right = 586.693
-margin_bottom = 248.275
-icon = ExtResource( 1 )
-script = ExtResource( 2 )
+margin_left = 404.209
+margin_top = 173.388
+margin_right = 593.209
+margin_bottom = 243.388
+text = "Start"
+script = ExtResource( 1 )
 [connection signal="button_down" from="StartKnopf" to="StartKnopf" method="_on_StartKnopf_button_down"]

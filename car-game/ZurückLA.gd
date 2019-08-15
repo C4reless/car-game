@@ -1,6 +1,5 @@
 extends Button
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -11,12 +10,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-	
 #	pass
 
 
-func _on_StartKnopf_button_down():
+func _on_ZurckLA_pressed():
 	get_tree().change_scene("res://Settings.tscn")
-	print("hi")
-	
 	pass # Replace with function body.

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Back.gd" type="Script" id=1]
+
+[node name="Spieleranzahl" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 68.4211
+margin_top = 156.842
+margin_right = 80.4211
+margin_bottom = 176.842
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 262.105
+margin_top = 146.316
+margin_right = 274.105
+margin_bottom = 166.316
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 557.895
+margin_top = 161.053
+margin_right = 569.895
+margin_bottom = 181.053
+
+[node name="BackSZ" type="Button" parent="."]
+margin_left = 425.263
+margin_top = 331.526
+margin_right = 467.263
+margin_bottom = 351.526
+text = "Back"
+script = ExtResource( 1 )
+[connection signal="pressed" from="BackSZ" to="BackSZ" method="_on_Back_pressed"]

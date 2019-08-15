@@ -1,6 +1,5 @@
 extends Button
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -11,12 +10,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-	
 #	pass
 
 
-func _on_StartKnopf_button_down():
-	get_tree().change_scene("res://Settings.tscn")
-	print("hi")
-	
+func _on_Spieleranzahl_pressed():
+	get_tree().change_scene("res://Spieleranzahl.tscn")
 	pass # Replace with function body.
