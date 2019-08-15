@@ -12,6 +12,7 @@ var device = 0
 
 var controler =false
 var velocity = Vector2(x, y)
+var direction = Vector2(x, y)
 
 func _input(event):
 	if event is InputEventJoypadButton and event is InputEventJoypadMotion:
@@ -21,14 +22,14 @@ func _input(event):
 	if device == 0 and controler == false:
 #	x achse
 		if Input.is_action_pressed("ui_right"+str(Spieler)):
-			velocity.x += xSpeed
+			direction.x += xSpeed
 		if Input.is_action_pressed("ui_left"+str(Spieler)):
-			velocity.x -= xSpeed
+			direction.x -= xSpeed
 #	y achse
 		if Input.is_action_pressed("ui_up"+str(Spieler)):
-			velocity.y -= ySpeed
+			direction.y -= ySpeed
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
-			velocity.y += ySpeed
+			direction.y += ySpeed
 	elif device == Spieler:
 		pass
 	
