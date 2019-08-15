@@ -2,8 +2,7 @@ extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
-export var xSpeed = 60
-export var ySpeed = 60
+export var Speed = 25
 export var Spieler = 0
 
 var x = 0
@@ -19,17 +18,7 @@ func _input(event):
 		controler = true
 		device = event.device
 		
-	if device == 0 and controler == false:
-#	x achse
-		if Input.is_action_pressed("ui_right"+str(Spieler)):
-			direction.x += xSpeed
-		if Input.is_action_pressed("ui_left"+str(Spieler)):
-			direction.x -= xSpeed
-#	y achse
-		if Input.is_action_pressed("ui_up"+str(Spieler)):
-			direction.y -= ySpeed
-		if Input.is_action_pressed("ui_down"+str(Spieler)):
-			direction.y += ySpeed
+	
 	elif device == Spieler:
 		pass
 	
@@ -42,6 +31,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	direction = Vector2()
+	if device == 0 and controler == false:
+#	x achse
+		if Input.is_action_pressed("ui_right"+str(Spieler)):
+			direction.x += 1
+		if Input.is_action_pressed("ui_left"+str(Spieler)):
+			direction.x -= 1
+#	y achse
+		if Input.is_action_pressed("ui_up"+str(Spieler)):
+			direction.y -= 1
+		if Input.is_action_pressed("ui_down"+str(Spieler)):
+			direction.y += 1
+	
+	velocity += direction.normalized() * Speed
 	move_and_slide(velocity)
 	velocity *= 0.9
 #	pass
