@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
-export var Speed = 40
+export var Speed = 100
 export var Spieler = 0
 
 var x = 0
@@ -46,23 +46,23 @@ func _physics_process(delta):
 	
 	velocity += direction.normalized() * Speed
 	move_and_slide(velocity)
-	velocity *= 0.95
+	velocity *= 0.5
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		print("Collided with: ", collision.collider.name,velocity,collision.collider.velocity)
 		var speed = velocity-collision.collider.velocity
 		
-		velocity = collision.collider.velocity - velocity
+		#velocity = (collision.collider.velocity - velocity) * 1.15
 		
-		"""
+		
 		if (collision.collider.velocity > velocity):
-			addingSpeed(speed)
+			addingSpeed(speed*1.5)
 		elif (collision.collider.velocity < velocity):
-			collision.collider.addingSpeed(speed)
+			collision.collider.addingSpeed(speed*1.5)
 		elif (collision.collider.velocity == velocity):
 			pass
-		"""
+		
 		
 #	pass
 func addingSpeed(addedvelocity):
