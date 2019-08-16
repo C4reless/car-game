@@ -5,32 +5,34 @@
 
 [node name="Levelauswahl" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 145.263
-margin_top = 196.842
-margin_right = 157.263
-margin_bottom = 216.842
+[node name="Level 1" type="Button" parent="."]
+margin_left = 299.745
+margin_top = 217.453
+margin_right = 357.745
+margin_bottom = 237.453
 text = "Level 1"
 script = ExtResource( 1 )
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 332.632
-margin_top = 184.211
-margin_right = 344.632
-margin_bottom = 204.211
+[node name="Level 2" type="Button" parent="."]
+margin_left = 984.0
+margin_top = 215.533
+margin_right = 1054.0
+margin_bottom = 235.533
+text = "Level 2"
 
-[node name="Button3" type="Button" parent="."]
-margin_left = 624.211
-margin_top = 185.263
-margin_right = 636.211
-margin_bottom = 205.263
+[node name="Level 3" type="Button" parent="."]
+margin_left = 1630.68
+margin_top = 225.357
+margin_right = 1696.68
+margin_bottom = 245.357
+text = "Level 3"
 
 [node name="ZurückLA" type="Button" parent="."]
-margin_left = 447.0
-margin_top = 442.0
-margin_right = 511.0
-margin_bottom = 462.0
+margin_left = 980.402
+margin_top = 588.369
+margin_right = 1044.4
+margin_bottom = 608.369
 text = "Back"
 script = ExtResource( 2 )
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Level 1" to="Level 1" method="_on_Button_pressed"]
 [connection signal="pressed" from="ZurückLA" to="ZurückLA" method="_on_ZurckLA_pressed"]

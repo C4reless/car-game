@@ -4,29 +4,32 @@
 
 [node name="Spieleranzahl" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 68.4211
-margin_top = 156.842
-margin_right = 80.4211
-margin_bottom = 176.842
+[node name="Zwei Spieler" type="Button" parent="."]
+margin_left = 314.651
+margin_top = 271.517
+margin_right = 437.651
+margin_bottom = 291.517
+text = "Zwei Spieler"
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 262.105
-margin_top = 146.316
-margin_right = 274.105
-margin_bottom = 166.316
+[node name="Drei Spieler" type="Button" parent="."]
+margin_left = 1001.0
+margin_top = 267.0
+margin_right = 1166.0
+margin_bottom = 287.0
+text = "Drei Spieler"
 
-[node name="Button3" type="Button" parent="."]
-margin_left = 557.895
-margin_top = 161.053
-margin_right = 569.895
-margin_bottom = 181.053
+[node name="Vier Spieler" type="Button" parent="."]
+margin_left = 1569.0
+margin_top = 272.0
+margin_right = 1684.0
+margin_bottom = 292.0
+text = "Vier Spieler"
 
 [node name="BackSZ" type="Button" parent="."]
-margin_left = 425.263
-margin_top = 331.526
-margin_right = 467.263
-margin_bottom = 351.526
+margin_left = 1046.97
+margin_top = 609.153
+margin_right = 1088.97
+margin_bottom = 629.153
 text = "Back"
 script = ExtResource( 1 )
 [connection signal="pressed" from="BackSZ" to="BackSZ" method="_on_Back_pressed"]
