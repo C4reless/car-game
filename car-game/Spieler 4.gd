@@ -5,6 +5,13 @@ extends KinematicBody2D
 export var Speed = 100
 export var Spieler = 0
 
+var auto0 = load("res://Bilder/auto 2.png")
+var auto1 = load("res://Bilder/auto 3.png")
+var auto2 = load("res://Bilder/auto 4.png")
+var auto3 = load("res://Bilder/auto.png")
+
+onready var sprite = $"auto 2"
+
 var x = 0
 var y = 0
 var device = 0
@@ -27,7 +34,15 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if (Spieler == 0):
+		sprite.texture = auto0
+	elif (Spieler == 1):
+		sprite.texture = auto1
+	elif (Spieler == 2):
+		sprite.texture = auto2
+	elif (Spieler == 3):
+		sprite.texture = auto3
+		 # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
