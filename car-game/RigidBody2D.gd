@@ -1,7 +1,8 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
+# var b = "text"
 export var Speed = 25
 export var Spieler = 0
 
@@ -10,7 +11,6 @@ var y = 0
 var device = 0
 
 var controler =false
-var velocity = Vector2(x, y)
 var direction = Vector2(x, y)
 
 func _input(event):
@@ -44,12 +44,5 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
 	
-	velocity += direction.normalized() * Speed
-	move_and_slide(velocity)
-	velocity *= 0.9
-	
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.collider.name,velocity,collision.collider.velocity)
-		
+	add_force(Vector2(),direction.normalized() * Speed)
 #	pass
