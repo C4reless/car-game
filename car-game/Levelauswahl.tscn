@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Button.gd" type="Script" id=1]
-[ext_resource path="res://ZurückLA.gd" type="Script" id=2]
+[ext_resource path="res://Level 2.gd" type="Script" id=2]
+[ext_resource path="res://Level 3.gd" type="Script" id=3]
+[ext_resource path="res://ZurückLA.gd" type="Script" id=4]
 
 [node name="Levelauswahl" type="Node2D"]
 
@@ -19,6 +21,7 @@ margin_top = 215.533
 margin_right = 1054.0
 margin_bottom = 235.533
 text = "Level 2"
+script = ExtResource( 2 )
 
 [node name="Level 3" type="Button" parent="."]
 margin_left = 1630.68
@@ -26,6 +29,7 @@ margin_top = 225.357
 margin_right = 1696.68
 margin_bottom = 245.357
 text = "Level 3"
+script = ExtResource( 3 )
 
 [node name="ZurückLA" type="Button" parent="."]
 margin_left = 980.402
@@ -33,6 +37,8 @@ margin_top = 588.369
 margin_right = 1044.4
 margin_bottom = 608.369
 text = "Back"
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 [connection signal="pressed" from="Level 1" to="Level 1" method="_on_Button_pressed"]
+[connection signal="pressed" from="Level 2" to="Level 2" method="_on_Level_2_pressed"]
+[connection signal="pressed" from="Level 3" to="Level 3" method="_on_Level_3_pressed"]
 [connection signal="pressed" from="ZurückLA" to="ZurückLA" method="_on_ZurckLA_pressed"]

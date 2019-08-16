@@ -13,6 +13,6 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://level 1.tscn")
+func _on_Level_3_pressed():
+	get_tree().change_scene("res://Level3.tscn")
 	pass # Replace with function body.
