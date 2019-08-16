@@ -11,6 +11,7 @@ var auto2 = load("res://Bilder/auto 4.png")
 var auto3 = load("res://Bilder/auto.png")
 
 onready var sprite = $"auto 2"
+var delaytime = 1.5
 
 var x = 0
 var y = 0
@@ -58,10 +59,35 @@ func _physics_process(delta):
 			direction.y -= 1
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
+	elif controler == true:
+		#x achse
+		if Input.is_action_pressed("ui_right"+str(Spieler)):
+			direction.x += 1
+		if Input.is_action_pressed("ui_left"+str(Spieler)):
+			direction.x -= 1
+#	y achse
+		if Input.is_action_pressed("ui_up"+str(Spieler)):
+			direction.y -= 1
+		if Input.is_action_pressed("ui_down"+str(Spieler)):
+			direction.y += 1
+		
+	#x achse
+	"""if Input.is_action_release("ui_right"+str(Spieler))
+			direction.x += 1
+		if Input.is_action_release("ui_left"+str(Spieler)):
+			direction.x -= 1
+#	y achse
+		if Input.is_action_release("ui_up"+str(Spieler)):
+			direction.y -= 1
+		if Input.is_action_release("ui_down"+str(Spieler)):
+			direction.y += 1"""
+			
 	
 	velocity += direction.normalized() * Speed
 	move_and_slide(velocity)
-	velocity *= 0.5
+	velocity *= 0.6
+	
+	rotation = velocity.angle()
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
