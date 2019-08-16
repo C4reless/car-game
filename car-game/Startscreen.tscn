@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Startscreen.gd" type="Script" id=1]
 [ext_resource path="res://StartKnopf.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Bilder/auto.png" type="Texture" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -20,6 +20,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 29.782, 60 ), Vector2( 988.203, 60 ), Vector2( 1890.24, 60 ), Vector2( 7.035, 60 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 180.0, 0.0 ]
 }
 
 [node name="Startscreen" type="Node2D"]
@@ -40,5 +52,6 @@ anims/Startbildshirm = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="AnimationPlayer"]
 position = Vector2( 7.035, 60 )
+scale = Vector2( 0.133149, 0.109203 )
 texture = ExtResource( 3 )
 [connection signal="button_down" from="StartKnopf" to="StartKnopf" method="_on_StartKnopf_button_down"]
