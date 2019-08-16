@@ -98,9 +98,9 @@ func _physics_process(delta):
 		
 		
 		if (collision.collider.velocity > velocity):
-			addingSpeed(speed*1.5)
+			addingSpeed(speed*1.2)
 		elif (collision.collider.velocity < velocity):
-			collision.collider.addingSpeed(speed*1.5)
+			collision.collider.addingSpeed(speed*1.2)
 		elif (collision.collider.velocity == velocity):
 			pass
 		
