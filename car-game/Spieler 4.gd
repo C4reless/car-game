@@ -11,7 +11,8 @@ var auto2 = load("res://Bilder/auto 4.png")
 var auto3 = load("res://Bilder/auto.png")
 
 onready var sprite = $"auto 2"
-var delaytime = 1.5
+
+onready var timer = $Timer
 
 var x = 0
 var y = 0
@@ -52,36 +53,48 @@ func _physics_process(delta):
 #	x achse
 		if Input.is_action_pressed("ui_right"+str(Spieler)):
 			direction.x += 1
+			timer.stop()
 		if Input.is_action_pressed("ui_left"+str(Spieler)):
 			direction.x -= 1
+			timer.stop()
 #	y achse
 		if Input.is_action_pressed("ui_up"+str(Spieler)):
 			direction.y -= 1
+			timer.stop()
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
+			timer.stop()
 	elif controler == true:
 		#x achse
 		if Input.is_action_pressed("ui_right"+str(Spieler)):
 			direction.x += 1
+			timer.stop()
 		if Input.is_action_pressed("ui_left"+str(Spieler)):
 			direction.x -= 1
+			timer.stop()
 #	y achse
 		if Input.is_action_pressed("ui_up"+str(Spieler)):
 			direction.y -= 1
+			timer.stop()
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
+			timer.stop()
 		
 	#x achse
-	"""if Input.is_action_release("ui_right"+str(Spieler))
-			direction.x += 1
-		if Input.is_action_release("ui_left"+str(Spieler)):
-			direction.x -= 1
+	if Input.is_action_released("ui_right"+str(Spieler)):
+		direction.x += 1
+		timer.start(1)
+	if Input.is_action_released("ui_left"+str(Spieler)):
+		direction.x -= 1
+		timer.start(1)
 #	y achse
-		if Input.is_action_release("ui_up"+str(Spieler)):
-			direction.y -= 1
-		if Input.is_action_release("ui_down"+str(Spieler)):
-			direction.y += 1"""
-			
+	if Input.is_action_released("ui_up"+str(Spieler)):
+		direction.y -= 1
+		timer.start(1)
+	if Input.is_action_released("ui_down"+str(Spieler)):
+		direction.y += 1
+		timer.start(1)
+		
 	
 	velocity += direction.normalized() * Speed
 	move_and_slide(velocity)
@@ -109,3 +122,10 @@ func _physics_process(delta):
 func addingSpeed(addedvelocity):
 	velocity =addedvelocity
 	pass
+
+
+func _on_Timer_timeout():
+	#wird aufgerufen wenn timer abgelaufen
+	#to do kontrolle x/y kontrolle setzen
+	direction
+	pass # Replace with function body.
