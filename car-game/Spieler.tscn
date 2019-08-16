@@ -1,20 +1,37 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Auto.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bilder/kreis2.0.png" type="Texture" id=1]
+[ext_resource path="res://Bilder/rechteck.png" type="Texture" id=2]
+[ext_resource path="res://Auto.tscn" type="PackedScene" id=3]
 
 [node name="Spieler" type="Node2D"]
 
-[node name="Spieler 4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 290.173, 249.643 )
+[node name="kreis21" type="Sprite" parent="."]
+position = Vector2( 1377.15, 542.805 )
+scale = Vector2( 1.91181, 1.94787 )
+texture = ExtResource( 1 )
 
-[node name="Spieler 3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1264.56, 743.137 )
+[node name="kreis20" type="Sprite" parent="."]
+position = Vector2( 418.981, 525.805 )
+scale = Vector2( 1.88863, 1.9015 )
+texture = ExtResource( 1 )
+
+[node name="rechteck" type="Sprite" parent="."]
+position = Vector2( 910.43, 510.35 )
+scale = Vector2( 1.49454, 1.31424 )
+texture = ExtResource( 2 )
+
+[node name="Spieler 4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1428.85, 755.464 )
+
+[node name="Spieler 3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 449.193, 259.725 )
 Spieler = 2
 
-[node name="Spieler 2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1280.4, 246.172 )
+[node name="Spieler 2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1407.13, 227.626 )
 Spieler = 1
 
-[node name="Spieler 1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 309.852, 796.031 )
+[node name="Spieler 1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 461.305, 765.123 )
 Spieler = 0

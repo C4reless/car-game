@@ -12,7 +12,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_DreiSpieler_pressed():
+func _on_VierSpieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
 	AnzahlSpieler = 4
 	pass # Replace with function body.
