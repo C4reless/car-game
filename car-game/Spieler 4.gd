@@ -94,7 +94,6 @@ func _physics_process(delta):
 	if Input.is_action_just_released("ui_right"+str(Spieler)):
 		direction.x += 1
 		timer.start(0.5)
-		print("Rechts")
 	if Input.is_action_just_released("ui_left"+str(Spieler)):
 		direction.x -= 1
 		timer.start(0.5)
@@ -144,3 +143,17 @@ func _on_Timer_timeout():
 	direction.x = 0
 	direction.y = 0
 	pass # Replace with function body.
+
+func die():
+	velocity = Vector2(0,0)
+	
+	var tween1 = Tween.new()
+	add_child(tween1)
+	tween1.interpolate_property(self,"rotation",rotation,rotation+720,1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
+	var tween = Tween.new()
+	add_child(tween)
+	tween.interpolate_property(self,"scale",scale,Vector2(0,0),1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
+	
+	tween.start() and tween1.start()
+	
+	pass
