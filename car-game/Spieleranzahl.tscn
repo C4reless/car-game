@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Back.gd" type="Script" id=1]
+[ext_resource path="res://Zwei Spieler.gd" type="Script" id=1]
+[ext_resource path="res://Drei Spieler.gd" type="Script" id=2]
+[ext_resource path="res://Vier Spieler.gd" type="Script" id=3]
+[ext_resource path="res://Back.gd" type="Script" id=4]
 
 [node name="Spieleranzahl" type="Node2D"]
 
@@ -10,6 +13,7 @@ margin_top = 271.517
 margin_right = 437.651
 margin_bottom = 291.517
 text = "Zwei Spieler"
+script = ExtResource( 1 )
 
 [node name="Drei Spieler" type="Button" parent="."]
 margin_left = 1001.0
@@ -17,6 +21,7 @@ margin_top = 267.0
 margin_right = 1166.0
 margin_bottom = 287.0
 text = "Drei Spieler"
+script = ExtResource( 2 )
 
 [node name="Vier Spieler" type="Button" parent="."]
 margin_left = 1569.0
@@ -24,6 +29,7 @@ margin_top = 272.0
 margin_right = 1684.0
 margin_bottom = 292.0
 text = "Vier Spieler"
+script = ExtResource( 3 )
 
 [node name="BackSZ" type="Button" parent="."]
 margin_left = 1046.97
@@ -31,5 +37,6 @@ margin_top = 609.153
 margin_right = 1088.97
 margin_bottom = 629.153
 text = "Back"
-script = ExtResource( 1 )
+script = ExtResource( 4 )
+[connection signal="pressed" from="Vier Spieler" to="Vier Spieler" method="_on_Vier_Spieler_pressed"]
 [connection signal="pressed" from="BackSZ" to="BackSZ" method="_on_Back_pressed"]

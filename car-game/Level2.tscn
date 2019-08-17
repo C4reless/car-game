@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Bilder/Kurve.png" type="Texture" id=1]
 [ext_resource path="res://Bilder/Straße.png" type="Texture" id=2]
 [ext_resource path="res://Bilder/Kurve scharf.png" type="Texture" id=3]
+[ext_resource path="res://Area2D.gd" type="Script" id=4]
+[ext_resource path="res://Auto.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 872.969, 52.9257 )
@@ -23,22 +25,22 @@ extents = Vector2( 130.534, 74.7409 )
 extents = Vector2( 258.548, 61.9709 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 329.23, 72.1638 )
-
-[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 1028.5, 27.6975 )
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 329.23, 72.1638 )
+
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 102.47, 41.4509 )
+extents = Vector2( 42.798, 88.6508 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 303.006, 56.0137 )
-
-[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 192.799, 38.9811 )
 
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 303.006, 56.0137 )
+
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 42.798, 88.6508 )
+extents = Vector2( 102.47, 41.4509 )
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 66.8583, 80.5831 )
@@ -157,123 +159,109 @@ texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 5.01054, 5.01056 )
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 861.738, 52.9791 )
 shape = SubResource( 1 )
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2( 120.253, -61.7965 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 883.524, 262.218 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 998.766, 195.411 )
 shape = SubResource( 2 )
 
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2( 78.4984, -56.786 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 1561.62, 203.762 )
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1635.11, 141.965 )
 shape = SubResource( 3 )
 
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2( 297.129, -145.305 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 928.141, 688.04 )
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1220.26, 537.724 )
 rotation = 0.354563
 shape = SubResource( 4 )
 
-[node name="Area2D5" type="Area2D" parent="."]
-position = Vector2( 71.8176, -93.5299 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2( 9.25305, 375.674 )
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 76.0601, 277.134 )
 shape = SubResource( 5 )
 
-[node name="Area2D7" type="Area2D" parent="Area2D5"]
-position = Vector2( 70.1474, 26.7228 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5/Area2D7"]
-position = Vector2( 42.5641, 294.247 )
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 179.519, 222.429 )
 rotation = -0.274796
+scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
-[node name="Area2D6" type="Area2D" parent="."]
-position = Vector2( 141.965, -66.8071 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
-position = Vector2( 42.5641, 294.247 )
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 179.519, 222.429 )
 rotation = -0.274796
+scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
-[node name="Area2D8" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
-position = Vector2( 295.87, 365.254 )
-rotation = 3.01193
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1443.51, 727.18 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
-[node name="Area2D9" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
-position = Vector2( 1448.52, 732.191 )
-rotation = 3.46476
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 290.859, 360.243 )
+rotation = 3.01193
+scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
-[node name="Area2D10" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10"]
-position = Vector2( 467.964, 495.777 )
-rotation = 3.46476
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 418.526, 460.62 )
+rotation = -2.03682
+scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
-[node name="Area2D11" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D11"]
-position = Vector2( 195.057, 794.071 )
-rotation = 3.46476
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 340.779, 571.686 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D11"]
-position = Vector2( 215.684, 711.564 )
-rotation = 3.46476
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 307.459, 643.086 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
-[node name="Area2D12" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D12"]
-position = Vector2( 312.47, 648.097 )
-rotation = 3.46476
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 210.673, 706.553 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D12"]
-position = Vector2( 345.79, 576.697 )
-rotation = 3.46476
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 190.046, 789.06 )
+rotation = -2.81843
 shape = SubResource( 11 )
 
-[node name="Area2D13" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D13"]
-position = Vector2( 423.537, 465.631 )
-rotation = 4.24637
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 462.953, 490.766 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 12 )
 
-[node name="Area2D14" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D14"]
-position = Vector2( 606.004, 608.431 )
-rotation = 3.46476
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 600.993, 603.42 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
 shape = SubResource( 13 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D14"]
-position = Vector2( 1791.22, 792.979 )
-rotation = 3.46476
-shape = SubResource( 13 )
-
-[node name="Area2D15" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D15"]
-position = Vector2( 1102.23, 944.719 )
-rotation = 6.35226
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1097.22, 939.708 )
+rotation = 0.0690747
+scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1786.21, 787.968 )
+rotation = -2.81843
+scale = Vector2( 1, 1 )
+shape = SubResource( 13 )
+
+[node name="Spieler 4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 100, 53 )
+scale = Vector2( 0.25, 0.25 )
+Speed = 3
+Spieler = 0
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

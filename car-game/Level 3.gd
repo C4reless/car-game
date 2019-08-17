@@ -14,5 +14,6 @@ func _ready():
 
 
 func _on_Level_3_pressed():
+	global_variable.globlevel = true
 	get_tree().change_scene("res://Level3.tscn")
 	pass # Replace with function body.

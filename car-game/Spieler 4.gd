@@ -8,7 +8,8 @@ export var Spieler = 0
 var auto0 = load("res://Bilder/auto 2.png")
 var auto1 = load("res://Bilder/auto 3.png")
 var auto2 = load("res://Bilder/auto 4.png")
-var auto3 = load("res://Bilder/auto.png")
+var auto3 = load("res://Bilder/auto 5.png")
+var autolevel = load("res://Bilder/auto.png")
 
 onready var sprite = $"auto 2"
 
@@ -33,19 +34,20 @@ func _input(event):
 	elif device == Spieler:
 		pass
 	
-	print(event.device)
 	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if (Spieler == 0):
+	if (Spieler == 0 and global_variable.globlevel == false):
 		sprite.texture = auto0
-	elif (Spieler == 1):
+	elif (Spieler == 1 and global_variable.globlevel == false):
 		sprite.texture = auto1
-	elif (Spieler == 2):
+	elif (Spieler == 2 and global_variable.globlevel == false):
 		sprite.texture = auto2
-	elif (Spieler == 3):
+	elif (Spieler == 3 and global_variable.globlevel == false):
 		sprite.texture = auto3
+	elif (Spieler == 0 and global_variable.globlevel == true):
+			sprite.texture = autolevel
 		 # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

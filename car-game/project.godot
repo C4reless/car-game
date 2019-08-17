@@ -19,6 +19,10 @@ config/name="car-game"
 run/main_scene="res://Spieler.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global_variable="*res://global_variable.gd"
+
 [display]
 
 window/size/width=1920

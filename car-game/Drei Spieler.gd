@@ -15,5 +15,6 @@ func _ready():
 
 func _on_DreiSpieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
-	AnzahlSpieler = 3
+	global_variable.globlevel = false
+	global_variable.AnzahlSpieler = 3
 	pass # Replace with function body.

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bilder/auto.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 70.435, 29.3314 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+scale = Vector2( 0.25, 0.25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.463318, 0 )
+shape = SubResource( 1 )
+
+[node name="auto" type="Sprite" parent="."]
+position = Vector2( 0.463287, 7.39742 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 1 )
