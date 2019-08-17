@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
-export var Speed = 100
+export var Speed = 2
 export var Spieler = 0
 
 var auto0 = load("res://Bilder/auto 2.png")
@@ -11,6 +11,8 @@ var auto2 = load("res://Bilder/auto 4.png")
 var auto3 = load("res://Bilder/auto.png")
 
 onready var sprite = $"auto 2"
+
+var moving = false
 
 onready var timer = $Timer
 
@@ -54,51 +56,61 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_right"+str(Spieler)):
 			direction.x += 1
 			timer.stop()
+			moving = true
 		if Input.is_action_pressed("ui_left"+str(Spieler)):
 			direction.x -= 1
 			timer.stop()
+			moving = true
 #	y achse
 		if Input.is_action_pressed("ui_up"+str(Spieler)):
 			direction.y -= 1
 			timer.stop()
+			moving = true
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
 			timer.stop()
+			moving = true
 	elif controler == true:
 		#x achse
 		if Input.is_action_pressed("ui_right"+str(Spieler)):
 			direction.x += 1
 			timer.stop()
+			moving = true
 		if Input.is_action_pressed("ui_left"+str(Spieler)):
 			direction.x -= 1
 			timer.stop()
+			moving = true
 #	y achse
 		if Input.is_action_pressed("ui_up"+str(Spieler)):
 			direction.y -= 1
 			timer.stop()
+			moving = true
 		if Input.is_action_pressed("ui_down"+str(Spieler)):
 			direction.y += 1
 			timer.stop()
+			moving = true
 		
 	#x achse
-	if Input.is_action_released("ui_right"+str(Spieler)):
+	if Input.is_action_just_released("ui_right"+str(Spieler)):
 		direction.x += 1
-		timer.start(1)
-	if Input.is_action_released("ui_left"+str(Spieler)):
+		timer.start(0.5)
+		print("Rechts")
+	if Input.is_action_just_released("ui_left"+str(Spieler)):
 		direction.x -= 1
-		timer.start(1)
+		timer.start(0.5)
 #	y achse
-	if Input.is_action_released("ui_up"+str(Spieler)):
+	if Input.is_action_just_released("ui_up"+str(Spieler)):
 		direction.y -= 1
-		timer.start(1)
-	if Input.is_action_released("ui_down"+str(Spieler)):
+		timer.start(0.5)
+	if Input.is_action_just_released("ui_down"+str(Spieler)):
 		direction.y += 1
-		timer.start(1)
+		timer.start(0.5)
 		
-	
-	velocity += direction.normalized() * Speed
-	move_and_slide(velocity)
-	velocity *= 0.6
+	if (moving == true ):
+		velocity += direction.normalized() * Speed
+		move_and_slide(velocity)
+	if (moving == false ):
+		velocity *= 0.9
 	
 	rotation = velocity.angle()
 	
@@ -127,5 +139,8 @@ func addingSpeed(addedvelocity):
 func _on_Timer_timeout():
 	#wird aufgerufen wenn timer abgelaufen
 	#to do kontrolle x/y kontrolle setzen
-	direction
+	
+	moving = false
+	direction.x = 0
+	direction.y = 0
 	pass # Replace with function body.
