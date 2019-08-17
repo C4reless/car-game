@@ -43,6 +43,7 @@ Spieler = 1
 
 [node name="Spieler 1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 461.305, 765.123 )
+Spieler = 0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 969.199, 128.379 )

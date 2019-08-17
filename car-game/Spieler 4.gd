@@ -133,9 +133,8 @@ func _physics_process(delta):
 		
 #	pass
 func Endscreen_process():
-	if (global_variable.AnzahlSpieler = 1):
-		get_
-	pass
+	if (global_variable.AnzahlSpieler == 1):
+		get_tree().change_scene("res://Endscreen.tscn")
 
 
 func addingSpeed(addedvelocity):
@@ -155,10 +154,6 @@ func _on_Timer_timeout():
 func die():
 	velocity = Vector2(0,0)
 	
-	global_variable.AnzahlSpieler -= 1
-	
-	print(global_variable.AnzahlSpieler)
-	
 	var tween1 = Tween.new()
 	add_child(tween1)
 	tween1.interpolate_property(self,"rotation",rotation,rotation+720,1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
@@ -167,5 +162,10 @@ func die():
 	tween.interpolate_property(self,"scale",scale,Vector2(0,0),1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
 	
 	tween.start() and tween1.start()
+	
+	global_variable.AktiveSpieler.erase(self)
+	print(global_variable.AktiveSpieler)
+	global_variable.AnzahlSpieler -= 1
+	print(global_variable.AnzahlSpieler)
 	
 	pass

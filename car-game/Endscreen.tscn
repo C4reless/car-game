@@ -1,3 +1,57 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Spieleranzahl.gd" type="Script" id=1]
+[ext_resource path="res://nochmal-Spielen.gd" type="Script" id=2]
+[ext_resource path="res://Levelauswahl.gd" type="Script" id=3]
+[ext_resource path="res://Hauptmenü.gd" type="Script" id=4]
+[ext_resource path="res://EndscreenAuto.gd" type="Script" id=5]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 895.51
+margin_top = 313.009
+margin_right = 1003.51
+margin_bottom = 353.009
+text = "Ende des Spieles"
+
+[node name="Spieleranzahl" type="Button" parent="."]
+margin_left = 1283.04
+margin_top = 319.873
+margin_right = 1779.04
+margin_bottom = 554.873
+text = "Spieleranzahl"
+script = ExtResource( 1 )
+
+[node name="Nochmal-Spielen" type="Button" parent="."]
+margin_left = 696.0
+margin_top = 29.0
+margin_right = 1214.0
+margin_bottom = 266.0
+text = "Nocheinmal Spielen"
+script = ExtResource( 2 )
+
+[node name="Levelauswahl" type="Button" parent="."]
+margin_left = 111.394
+margin_top = 290.491
+margin_right = 614.394
+margin_bottom = 530.491
+text = "zur Levelauswahl"
+script = ExtResource( 3 )
+
+[node name="Hauptmenue" type="Button" parent="."]
+margin_left = 770.545
+margin_top = 733.729
+margin_right = 1048.54
+margin_bottom = 836.729
+text = "Hauptmenü"
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -100, -100 )
+script = ExtResource( 5 )
+[connection signal="pressed" from="Spieleranzahl" to="Spieleranzahl" method="_on_Back_pressed"]
+[connection signal="pressed" from="Nochmal-Spielen" to="Nochmal-Spielen" method="_on_NochmalSpielen_pressed"]
+[connection signal="pressed" from="Nochmal-Spielen" to="Nochmal-Spielen" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Levelauswahl" to="Levelauswahl" method="_on_Levelauswahl_pressed"]
+[connection signal="pressed" from="Hauptmenue" to="Hauptmenue" method="_on_Hauptmen_pressed"]

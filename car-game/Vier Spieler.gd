@@ -17,4 +17,5 @@ func _ready():
 func _on_Vier_Spieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
 	global_variable.AnzahlSpieler = 4
+	global_variable.AnzahlLeztesSpiel = 4
 	pass # Replace with function body.

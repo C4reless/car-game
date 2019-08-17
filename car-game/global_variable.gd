@@ -1,6 +1,8 @@
 extends Node
 
 var AnzahlSpieler = 1
+var AnzahlLeztesSpiel
+var AktiveSpieler = []
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
