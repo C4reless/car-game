@@ -9,10 +9,10 @@ onready var Spieler4 = $"Spieler 4"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (global_variable.AnzahlSpieler == 2):
-		Spieler3.hide()
-		Spieler4.hide()
+		remove_child(Spieler3)
+		remove_child(Spieler4)
 	if (global_variable.AnzahlSpieler == 3):
-		Spieler4.hide()
+		remove_child(Spieler4)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

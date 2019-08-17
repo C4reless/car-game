@@ -132,6 +132,12 @@ func _physics_process(delta):
 		
 		
 #	pass
+func Endscreen_process():
+	if (global_variable.AnzahlSpieler = 1):
+		get_
+	pass
+
+
 func addingSpeed(addedvelocity):
 	velocity =addedvelocity
 	pass
