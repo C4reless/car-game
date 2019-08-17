@@ -38,16 +38,14 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if (Spieler == 0 and global_variable.globlevel == false):
+	if (Spieler == 0):
 		sprite.texture = auto0
-	elif (Spieler == 1 and global_variable.globlevel == false):
+	elif (Spieler == 1):
 		sprite.texture = auto1
-	elif (Spieler == 2 and global_variable.globlevel == false):
+	elif (Spieler == 2):
 		sprite.texture = auto2
-	elif (Spieler == 3 and global_variable.globlevel == false):
+	elif (Spieler == 3):
 		sprite.texture = auto3
-	elif (Spieler == 0 and global_variable.globlevel == true):
-			sprite.texture = autolevel
 		 # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -148,6 +146,10 @@ func _on_Timer_timeout():
 
 func die():
 	velocity = Vector2(0,0)
+	
+	global_variable.AnzahlSpieler -= 1
+	
+	print(global_variable.AnzahlSpieler)
 	
 	var tween1 = Tween.new()
 	add_child(tween1)

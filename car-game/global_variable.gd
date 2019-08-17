@@ -1,7 +1,6 @@
 extends Node
 
-var globlevel
-var AnzahlSpieler = 1
+var AnzahlSpieler = 4
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

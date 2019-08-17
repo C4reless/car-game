@@ -14,7 +14,6 @@ func _ready():
 
 func _on_VierSpieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
-	global_variable.globlevel = false
 	global_variable.AnzahlSpieler = 4
 	pass # Replace with function body.
 # Called when the node enters the scene tree for the first time.
