@@ -110,7 +110,7 @@ func _physics_process(delta):
 		velocity += direction.normalized() * Speed
 		move_and_slide(velocity)
 	if (moving == false ):
-		velocity *= 0.9
+		velocity *= 0.99
 	
 	rotation = velocity.angle()
 	
@@ -119,15 +119,15 @@ func _physics_process(delta):
 		print("Collided with: ", collision.collider.name,velocity,collision.collider.velocity)
 		var speed = velocity-collision.collider.velocity
 		
-		#velocity = (collision.collider.velocity - velocity) * 1.15
+		velocity = (collision.collider.velocity - velocity) * 0.9
 		
 		
-		if (collision.collider.velocity > velocity):
-			addingSpeed(speed*1.2)
+		"""if (collision.collider.velocity > velocity):
+			addingSpeed(speed*0.9)
 		elif (collision.collider.velocity < velocity):
-			collision.collider.addingSpeed(speed*1.2)
+			collision.collider.addingSpeed(speed*0.9)
 		elif (collision.collider.velocity == velocity):
-			pass
+			pass"""
 		
 		
 #	pass

@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bilder/kreis2.0.png" type="Texture" id=1]
 [ext_resource path="res://Bilder/rechteck.png" type="Texture" id=2]
 [ext_resource path="res://Auto.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 390.347
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 146.23, 122.288 )
 
 [node name="Spieler" type="Node2D"]
 
@@ -37,5 +43,28 @@ position = Vector2( 461.305, 765.123 )
 Spieler = 0
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 1385.78, 542.805 )
+position = Vector2( 969.199, 128.379 )
 scale = Vector2( 1.91181, 1.94787 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 240.627, 199.376 )
+scale = Vector2( 0.523064, 0.513381 )
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 969.199, 128.379 )
+scale = Vector2( 1.91181, 1.94787 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -264.553, 192.007 )
+scale = Vector2( 0.523064, 0.513381 )
+shape = SubResource( 1 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 969.199, 128.379 )
+scale = Vector2( 1.91181, 1.94787 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( -12.4993, 194.113 )
+scale = Vector2( 0.523064, 0.513381 )
+shape = SubResource( 2 )
