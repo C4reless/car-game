@@ -5,6 +5,7 @@ extends KinematicBody2D
 export var Speed = 2
 export var Spieler = 0
 
+
 var auto0 = load("res://Bilder/auto 2.png")
 var auto1 = load("res://Bilder/auto 3.png")
 var auto2 = load("res://Bilder/auto 4.png")
@@ -46,6 +47,7 @@ func _ready():
 		sprite.texture = auto2
 	elif (Spieler == 3):
 		sprite.texture = auto3
+		
 		 # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

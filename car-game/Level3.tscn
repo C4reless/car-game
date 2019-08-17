@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bilder/Straße.png" type="Texture" id=1]
 [ext_resource path="res://Bilder/Kurve scharf.png" type="Texture" id=2]
@@ -7,9 +7,6 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3710.8, 186.258 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 665.894, 540.57 )
 
 [node name="Level3" type="Node2D"]
 
@@ -98,68 +95,4 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 3216.46, 43.4404 )
 shape = SubResource( 1 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3186.25, 43.4404 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3025.13, 3890.22 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3276.88, 3366.58 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3387.65, 2792.58 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3488.35, 2067.53 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3458.14, 1412.98 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3427.93, 768.489 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6559.74, 426.105 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6559.74, 426.105 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6710.79, 405.965 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 7385.49, 4242.68 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 135.01, 3618.33 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 286.063, 2450.2 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6670.52, 3064.48 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6670.52, 1765.43 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 326.342, 1000.1 )
-shape = SubResource( 2 )
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
