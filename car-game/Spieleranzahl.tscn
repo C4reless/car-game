@@ -38,5 +38,7 @@ margin_right = 1088.97
 margin_bottom = 629.153
 text = "Back"
 script = ExtResource( 4 )
+[connection signal="pressed" from="Zwei Spieler" to="Zwei Spieler" method="_on_Zwei_Spieler_pressed"]
+[connection signal="pressed" from="Drei Spieler" to="Drei Spieler" method="_on_Drei_Spieler_pressed"]
 [connection signal="pressed" from="Vier Spieler" to="Vier Spieler" method="_on_Vier_Spieler_pressed"]
 [connection signal="pressed" from="BackSZ" to="BackSZ" method="_on_Back_pressed"]

@@ -13,8 +13,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_DreiSpieler_pressed():
+
+
+func _on_Drei_Spieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
-	global_variable.globlevel = false
 	global_variable.AnzahlSpieler = 3
 	pass # Replace with function body.

@@ -12,8 +12,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_VierSpieler_pressed():
+
+
+func _on_Vier_Spieler_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
 	global_variable.AnzahlSpieler = 4
 	pass # Replace with function body.
-# Called when the node enters the scene tree for the first time.
