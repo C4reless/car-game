@@ -6,7 +6,7 @@
 [node name="Level3" type="Node2D"]
 
 [node name="Straße" type="Sprite" parent="."]
-position = Vector2( 833.726, 50.4727 )
+position = Vector2( 811.068, 37.8851 )
 scale = Vector2( 1.60001, 0.160428 )
 texture = ExtResource( 1 )
 
