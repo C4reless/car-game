@@ -17,6 +17,7 @@ onready var sprite = $"auto 2"
 var moving = false
 
 onready var timer = $Timer
+onready var timer2 = $Timer2
 
 var x = 0
 var y = 0
@@ -132,9 +133,9 @@ func _physics_process(delta):
 		
 		
 #	pass
-func Endscreen_process():
+"""func Endscreen_process():
 	if (global_variable.AnzahlSpieler == 1):
-		get_tree().change_scene("res://Endscreen.tscn")
+		get_tree().change_scene("res://Endscreen.tscn")"""
 
 
 func addingSpeed(addedvelocity):
@@ -168,4 +169,11 @@ func die():
 	global_variable.AnzahlSpieler -= 1
 	print(global_variable.AnzahlSpieler)
 	
+	if (global_variable.AnzahlSpieler == 1):
+		timer2.start(1.5)
+	
 	pass
+
+func _on_Timer2_timeout():
+	get_tree().change_scene("res://Endscreen.tscn")
+	pass # Replace with function body.
