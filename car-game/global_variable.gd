@@ -1,8 +1,13 @@
 extends Node
 
+
+var GameOver = false
 var AnzahlSpieler = 1
 var AnzahlLeztesSpiel
 var AktiveSpieler = []
+var WinnerTexture 
+var GewinnerAuto
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

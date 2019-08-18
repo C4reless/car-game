@@ -10,6 +10,7 @@ var auto0 = load("res://Bilder/auto 2.png")
 var auto1 = load("res://Bilder/auto 3.png")
 var auto2 = load("res://Bilder/auto 4.png")
 var auto3 = load("res://Bilder/auto 5.png")
+
 var autolevel = load("res://Bilder/auto.png")
 
 onready var sprite = $"auto 2"
@@ -17,7 +18,6 @@ onready var sprite = $"auto 2"
 var moving = false
 
 onready var timer = $Timer
-onready var timer2 = $Timer2
 
 var x = 0
 var y = 0
@@ -170,10 +170,7 @@ func die():
 	print(global_variable.AnzahlSpieler)
 	
 	if (global_variable.AnzahlSpieler == 1):
-		timer2.start(1.5)
+		yield(get_tree().create_timer(1.5),"timeout")
+		get_tree().change_scene("res://Endscreen.tscn")
 	
 	pass
-
-func _on_Timer2_timeout():
-	get_tree().change_scene("res://Endscreen.tscn")
-	pass # Replace with function body.

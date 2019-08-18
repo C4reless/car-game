@@ -15,4 +15,5 @@ func _ready():
 func _on_NochmalSpielen_pressed():
 	get_tree().change_scene("res://Spieler.tscn")
 	global_variable.AnzahlSpieler = global_variable.AnzahlLeztesSpiel
+	global_variable.GameOver = false
 	pass # Replace with function body.

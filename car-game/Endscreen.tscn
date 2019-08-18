@@ -9,11 +9,11 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 895.51
-margin_top = 313.009
-margin_right = 1003.51
-margin_bottom = 353.009
-text = "Ende des Spieles"
+margin_left = 905.864
+margin_top = 325.432
+margin_right = 980.864
+margin_bottom = 350.432
+text = "Gewinner"
 
 [node name="Spieleranzahl" type="Button" parent="."]
 margin_left = 1283.04
@@ -53,6 +53,5 @@ scale = Vector2( 0.15, 0.15 )
 script = ExtResource( 5 )
 [connection signal="pressed" from="Spieleranzahl" to="Spieleranzahl" method="_on_Spieleranzahl_pressed"]
 [connection signal="pressed" from="Nochmal-Spielen" to="Nochmal-Spielen" method="_on_NochmalSpielen_pressed"]
-[connection signal="pressed" from="Nochmal-Spielen" to="Nochmal-Spielen" method="_on_Button2_pressed"]
 [connection signal="pressed" from="Levelauswahl" to="Levelauswahl" method="_on_Levelauswahl_pressed"]
 [connection signal="pressed" from="Hauptmenue" to="Hauptmenue" method="_on_Hauptmenue_pressed"]

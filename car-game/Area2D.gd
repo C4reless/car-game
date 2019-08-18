@@ -14,5 +14,13 @@ func _ready():
 
 
 func _on_Area2D_body_exited(body):
-	body.die()
+	print(body.name)
+	
+	if (global_variable.AnzahlSpieler == 1):
+		global_variable.GewinnerAuto = global_variable.AktiveSpieler[0].Spieler
+		global_variable.GameOver = true
+	
+	if (global_variable.GameOver == false):
+		body.die()
+		print(body.name)
 	pass # Replace with function body.
