@@ -17,6 +17,5 @@ func _ready():
 
 func _on_StartKnopf_button_down():
 	get_tree().change_scene("res://Settings.tscn")
-	print("hi")
 	
 	pass # Replace with function body.
